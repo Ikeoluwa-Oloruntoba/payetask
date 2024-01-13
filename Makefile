@@ -2,11 +2,7 @@ setup:
 	@make build
 	@make up 
 	@make composer-update
-	@make articles_help
-	@make fetch_articles
-	@make fetch_articles_limit
-	@make fetch_articles_comments
-	@make fetch_articles_both
+	@make test
 
 test: 
 	@make articles_help
