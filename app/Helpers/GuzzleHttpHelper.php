@@ -37,7 +37,7 @@ class GuzzleHttpHelper
             return [
                 'status' => 'failed',
                 'error_code' => $statusCode,
-                'data' => json_decode($message),
+                'message' => json_decode($message) ?? "Something Went Wrong, Check Base URL",
             ];
         }
     }
@@ -65,7 +65,7 @@ class GuzzleHttpHelper
             return [
                 'status' => 'failed',
                 'error_code' => $statusCode,
-                'data' => json_decode($message),
+                'message' => json_decode($message) ?? "Something Went Wrong, Check Base URL",
             ];
         }
     }

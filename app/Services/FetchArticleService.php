@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Helpers\GuzzleHttpHelper;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
@@ -45,7 +46,7 @@ class FetchArticleService{
             'per_page' => $limit,
         ], $this->headers);
     }
-    
+
 
     protected function processArticles($articles, $hasCommentsOnly)
     {
@@ -68,6 +69,7 @@ class FetchArticleService{
             }, $articles['data']);
             
         } else {
+            dd($articles['message']);
             // Handle errors here based on your requirements
             return $articles['message'];
         }
