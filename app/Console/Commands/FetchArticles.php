@@ -19,7 +19,7 @@ class FetchArticles extends Command
      *
      * @var string
      */
-    protected $description = 'This Command Fetches Articles From https://developers.forem.com/api/v1#tag/articles/operation/getArticles';
+    protected $description = 'This Command Fetches Articles From Dev.to Public API';
 
     /**
      * Execute the console command.
